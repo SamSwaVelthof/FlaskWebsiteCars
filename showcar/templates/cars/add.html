@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+<div class="container">
+	<div class="row">
+	    <div class="col">
+			<h1>Maak auto aan</h1>
+    		<form method="POST">
+    		    {{ form.hidden_tag() }}
+				<div class="mt-1">
+					{{ form.name.label }} <br>
+					{{ form.name() }}
+				</div> 
+				<div class="mt-1">
+					{{ form.description.label }} <br>
+					{{ form.description() }}
+				</div>
+				<div class="mt-1">
+					{{ form.brand.label }}<br>
+					{{ form.brand() }} 
+				</div>
+				<div class="mt-5">
+					{{ form.submit() }}
+				</div>
+    		</form>
+		</div>
+	</div>
+</div>
+</section>
+
+{% endblock %}
